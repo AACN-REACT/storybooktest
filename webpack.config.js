@@ -3,16 +3,17 @@ const path = require("path");
 const htmlPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+    mode:"development",
+  entry: "./src/",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    outputPath: "/"
+    publicPath: "/"
   },
-  modules: {
+  module: {
     rules: [
       {
-        test: /js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"

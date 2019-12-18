@@ -3,6 +3,16 @@ import ReactDOM from 'react-dom';
 
 
 
+function SomeComponent(){
+
+
+    return (
+        <div>
+            <h3 style={{color:"red"}}>This is another component</h3>
+        </div>
+    )
+}
+
 function App(){
 
 
@@ -10,6 +20,7 @@ function App(){
     return (
         <div>
             <h2>This is my first app</h2>
+            <SomeComponent />
         </div>
     )
 }
